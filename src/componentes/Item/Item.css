@@ -1,0 +1,33 @@
+.cardLoca {
+    width: 18rem;
+    box-shadow: 0 6px 10px rgba(121, 28, 10, 1);
+    transition: all 0.3s ease;
+    /* border: 2px solid rgba(121, 28, 10, 1)!important; */
+    border-width: 2px;
+    border-color: rgba(121, 28, 10, 1);
+    border-style: solid;
+    position: relative;
+    margin: 2vh 0 8vh 0;
+}
+
+.cardLoca:hover {
+    transform: translateY(-10px);
+}
+
+.botonDetalle {
+    font-weight: 900;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ec4525;
+    color: rgb(240, 241, 222);
+    position: relative;
+    bottom: 0;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
