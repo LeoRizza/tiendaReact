@@ -1,3 +1,9 @@
 .carrito {
     width: 2rem;
+    
+}
+
+.carritoDiv {
+    display: flex;
+    align-items: center;
 }
