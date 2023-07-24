@@ -6,7 +6,7 @@ import './Item.css'
 const Item = ({ id, nombre, precio, descripcion, img }) => {
     return (
         <Card className='cardLoca'>
-            <Card.Img variant="top" src={img} />
+            <Card.Img variant="top" className='detalleImg' src={img} />
             <Card.Body>
                 <Card.Title style={{ fontWeight: "900" }}>{nombre}</Card.Title>
                 <Card.Text>

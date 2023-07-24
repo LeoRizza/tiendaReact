@@ -30,7 +30,7 @@ const NavBar = () => {
                         <NavLink className="estiloCat" to="/categoria/3">Empanadas</NavLink>
                     </li>
                 </ul>
-                <CartWidget />
+                <CartWidget/> 
             </nav>
 
             <button className='abrirMenu' onClick={abrirMenu}><img className='icono' src="../img/burger.png" alt="burger" /></button>

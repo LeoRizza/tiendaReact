@@ -5,11 +5,10 @@
     margin-right: auto;
     margin-top: 3vh;
     border-radius: 15px;
-    border: solid 4px rgba(121, 28, 10, 1);
+    border: solid 3px #ec4525;
     box-shadow: 25px 10px 20px rgba(121, 28, 10, 1);
-    width: 30%;
 }
 
 .cardDetalle2 {
-    font-size: 2em;
+    font-size: 1.3em;
 }
