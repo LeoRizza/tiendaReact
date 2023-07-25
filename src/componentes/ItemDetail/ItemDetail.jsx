@@ -1,5 +1,6 @@
 import ItemCount from "../ItemCount/ItemCount";
-import { useState, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
+import { ContextCart } from "../../context/ContextCart";
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 import { Link } from "react-router-dom";
@@ -8,9 +9,13 @@ import './ItemDetail.css';
 const ItemDetail = ({ id, nombre, precio, descripcion, img, stock}) => {
     const [agregarCant, setAgregarCantidad] = useState(0);
 
+    const {agregarProducto} = useContext(ContextCart)
+
     const handlerCant = (cantidad) => {
         setAgregarCantidad(cantidad);
-        console.log("Producto agregado: " + cantidad);
+        /* console.log("Producto agregado: " + cantidad); */
+        const item = {id, nombre, precio};
+        agregarProducto(item, cantidad)
     }
 
     return (
