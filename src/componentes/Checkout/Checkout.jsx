@@ -117,7 +117,7 @@ const Checkout = () => {
     const [error, setError] = useState("");
     const [orderId, setOrderId] = useState("");
 
-    const { cart, vaciarCart, total, cantidadTotal } = useContext(ContextCart);
+    const { cart, vaciarCart, total } = useContext(ContextCart);
 
     const handlerForm = (event) => {
         event.preventDefault();
@@ -181,13 +181,15 @@ const Checkout = () => {
                 {
                     cart.map(producto => (
                         <div key={producto.item.id}>
-                            <img src={producto.item.img} alt={producto.item.nombre}></img>
                             <p> {producto.item.nombre} x {producto.cantidad} </p>
                             <strong> $ {producto.item.precio} </strong>
                             <hr />
                         </div>
                     ))
                 }
+                <div>
+                    <h2 className="precioTotal">Precio total: $ {total}</h2>
+                </div>
                 <div className="form-group">
                     <label htmlFor=""> Nombre </label>
                     <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />

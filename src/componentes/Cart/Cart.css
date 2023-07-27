@@ -7,6 +7,10 @@
     padding: 10%;
 }
 
+.precioTotal {
+    font-weight: 600;
+}
+
 .cartButton {
     border-radius: 16px;
     background-color: #791c0a;

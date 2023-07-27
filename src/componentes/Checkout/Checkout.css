@@ -1,3 +1,26 @@
+.precioTotal {
+    font-weight: 600;
+}
+
+.form-group {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+}
+
+.form-group input {
+    width: 50%;
+    border-radius: 5px;
+    border: solid 1px;
+}
+
+.form-group label{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 .checkoutButton {
     border-radius: 16px;
     background-color: #791c0a;

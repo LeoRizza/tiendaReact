@@ -6,4 +6,22 @@
 .carritoDiv {
     display: flex;
     align-items: center;
+    position: relative;
+}
+
+.cartLink {
+    text-decoration: none;
+    display: flex;
+}
+
+.CartWidgetNumber {
+    color: #f0f1de;
+    background-color: #791c0a;
+    border-radius: 50px;
+    font-size: 14px;
+    width: 22px;
+    text-decoration: none;
+    position: absolute;
+    right: -16px;
+    bottom: -8px;
 }

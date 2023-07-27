@@ -8,10 +8,10 @@ const CartWidget = () => {
     const imgCarrito = "../img/carrito.png";
     return (
         <div className='carritoDiv'>
-            <Link to="/cart">
+            <Link className='cartLink' to="/cart">
                 <img className='carrito' src={imgCarrito} alt="carrito de compras" />
                 {
-                    cantidadTotal > 0 && <strong> {cantidadTotal} </strong>
+                    cantidadTotal > 0 && <p className='CartWidgetNumber'> {cantidadTotal} </p>
                 }
             </Link>
         </div>
