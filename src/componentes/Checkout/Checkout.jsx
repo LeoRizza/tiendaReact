@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { ContextCart } from "../../context/ContextCart";
 import { db } from "../../data/config";
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
+import { Link } from "react-router-dom";
 import './Checkout.css'
 
 const Checkout = () => {
@@ -14,6 +15,8 @@ const Checkout = () => {
     const [orderId, setOrderId] = useState("");
 
     const { cart, vaciarCart, total } = useContext(ContextCart);
+
+    const [showContinueShopping, setShowContinueShopping] = useState(false);
 
     const handlerForm = (event) => {
         event.preventDefault();
@@ -58,6 +61,7 @@ const Checkout = () => {
                     .then((docRef) => {
                         setOrderId(docRef.id);
                         vaciarCart();
+                        setShowContinueShopping(true);
                     })
                     .catch((error) => {
                         console.log("error al crear la orden", error);
@@ -68,6 +72,12 @@ const Checkout = () => {
                 console.log("No se puede actualizar el stock", error);
                 setError("No se puede actualizar el stock");
             })
+
+        setNombre(""),
+        setApellido(""),
+        setEmail(""),
+        setTelefono(""),
+        setEmailConfirm("")
     }
 
     return (
@@ -114,9 +124,13 @@ const Checkout = () => {
             </form>
             {
                 orderId && (
-                    <strong> ¡Gracias por tu compra! Tu numero de orden es {orderId} </strong>
+                    <div className="column">
+                        <strong className="ordenCode"> ¡Gracias por tu compra! Tu numero de orden es {orderId} </strong>
+                        {showContinueShopping && <Link to="/" className="seguirButton"> Seguir Comprando </Link>}
+                    </div>
                 )
             }
+            {/* <Link to="/" className="seguirButton"> Seguir Comprando </Link> */}
         </div>
     )
 }
