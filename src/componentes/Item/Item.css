@@ -14,6 +14,20 @@
     transform: translateY(-10px);
 }
 
+.dataCard {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: #ec4525 solid 1px;
+    border-radius: 16px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.dataCard p {
+    margin: 0 0 0 0;
+}
+
 .detalleImg {
     width: 18rem;
 }

@@ -13,7 +13,6 @@ const ItemDetail = ({ id, nombre, precio, descripcion, img, stock}) => {
 
     const handlerCant = (cantidad) => {
         setAgregarCantidad(cantidad);
-        /* console.log("Producto agregado: " + cantidad); */
         const item = {id, nombre, precio};
         agregarProducto(item, cantidad)
     }
@@ -31,7 +30,7 @@ const ItemDetail = ({ id, nombre, precio, descripcion, img, stock}) => {
                     <strong> precio: $ {precio} </strong> 
             </Card.Body>
             {
-            agregarCant > 0 ? (<Link to="/cart">terminar</Link>) : (<ItemCount inicial = {1} stock={stock} funcionAgregar={handlerCant}/>)
+            agregarCant > 0 ? (<Link to="/cart" className="terminarCompra">terminar</Link>) : (<ItemCount inicial = {1} stock={stock} funcionAgregar={handlerCant}/>)
         }
         </Card>
         </div>

@@ -1,0 +1,59 @@
+.itemCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 20px;
+}
+
+.eliminarButton {
+    border-radius: 12px; /* Reducir el border-radius */
+    background-color: #791c0a;
+    border: solid transparent;
+    border-width: 0 0 3px; /* Reducir el tamaño del borde inferior */
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 18px; /* Ajustar el line-height */
+    margin: auto;
+    overflow: visible;
+    padding: 9px 15px; /* Reducir el padding */
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateZ(0);
+    position: relative; /* Añadir position: relative para que el ::after funcione correctamente */
+}
+
+.eliminarButton::after {
+    background-clip: padding-box;
+    background-color: #ec4525;
+    border: solid transparent;
+    border-radius: 12px; /* Reducir el border-radius */
+    border-width: 0 0 3px; /* Reducir el tamaño del borde inferior */
+    bottom: -3px; /* Ajustar la posición */
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.eliminarButton:focus {
+    user-select: auto;
+}
+.eliminarButton:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+.eliminarButton:disabled {
+    cursor: auto;
+}
+
+.eliminarButton:active::after {
+    border-width: 0 0 0px;
+}
+.eliminarButton:active {
+    padding-bottom: 10px;
+}
