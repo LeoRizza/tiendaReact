@@ -173,7 +173,7 @@ const Checkout = () => {
                 setError("No se puede actualizar el stock");
             })
     }
-    
+
     return (
         <div>
             <h2>Checkout</h2>
@@ -181,7 +181,7 @@ const Checkout = () => {
                 {
                     cart.map(producto => (
                         <div key={producto.item.id}>
-                            <img src={producto.item.img} alt="{item.nombre}"></img>
+                            <img src={producto.item.img} alt={producto.item.nombre}></img>
                             <p> {producto.item.nombre} x {producto.cantidad} </p>
                             <strong> $ {producto.item.precio} </strong>
                             <hr />
