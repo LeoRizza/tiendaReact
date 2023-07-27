@@ -6,33 +6,38 @@
     margin: 20px;
 }
 
+.imgCart {
+    width: 10rem;
+    border-radius: 15px;
+}
+
 .eliminarButton {
-    border-radius: 12px; /* Reducir el border-radius */
+    border-radius: 12px;
     background-color: #791c0a;
     border: solid transparent;
-    border-width: 0 0 3px; /* Reducir el tamaño del borde inferior */
+    border-width: 0 0 3px;
     color: #FFFFFF;
     display: inline-block;
-    font-size: 14px; /* Reducir el tamaño de la fuente */
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: .8px;
-    line-height: 18px; /* Ajustar el line-height */
+    line-height: 18px;
     margin: auto;
     overflow: visible;
-    padding: 9px 15px; /* Reducir el padding */
+    padding: 9px 15px;
     text-align: center;
     text-transform: uppercase;
     transform: translateZ(0);
-    position: relative; /* Añadir position: relative para que el ::after funcione correctamente */
+    position: relative;
 }
 
 .eliminarButton::after {
     background-clip: padding-box;
     background-color: #ec4525;
     border: solid transparent;
-    border-radius: 12px; /* Reducir el border-radius */
-    border-width: 0 0 3px; /* Reducir el tamaño del borde inferior */
-    bottom: -3px; /* Ajustar la posición */
+    border-radius: 12px;
+    border-width: 0 0 3px;
+    bottom: -3px;
     content: "";
     left: 0;
     position: absolute;
