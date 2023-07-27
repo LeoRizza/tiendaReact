@@ -61,6 +61,8 @@ li:after {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: rgb(240, 241, 222);
     letter-spacing: 7px;
@@ -72,6 +74,11 @@ li:after {
     margin: 0;
 }
 
+.logoNav {
+    height: 6vh;
+    margin-right: 20px;
+}
+
 .abrirMenu, .cerrarMenu {
     display: none;
 }
@@ -81,6 +88,7 @@ li:after {
 }
 
 @media (max-width: 991px) {
+
     .abrirMenu,
     .cerrarMenu {
         display: block;
@@ -99,6 +107,7 @@ li:after {
     }
 
     .nav {
+        height: 100%;
         opacity: 0;
         visibility: hidden;
         display: flex;
@@ -134,7 +143,7 @@ li:after {
 @media (max-width: 600px) {
 
     .logo h1 {
-        font-size: 5vh;
+        font-size: 9vw;
     }
 
 }

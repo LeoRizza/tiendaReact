@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-/* import { getProductos, getProductosPorCat } from "../../asyncmock"; */
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -11,33 +10,29 @@ const ItemListContainer = (props) => {
 
     const { idCategoria } = useParams();
 
-    useEffect ( () => {
+    useEffect(() => {
         const products = idCategoria ? query(collection(db, "inventario"), where("idCat", "==", idCategoria)) : collection(db, "inventario");
 
         getDocs(products)
-            .then(res=> {
-                const newProducts = res.docs.map( doc=> {
+            .then(res => {
+                const newProducts = res.docs.map(doc => {
                     const data = doc.data()
-                    return {id: doc.id, ...data}
+                    return { id: doc.id, ...data }
                 })
                 setProductos(newProducts);
             })
-            .catch(error=> console.log(error))
+            .catch(error => console.log(error))
 
     }, [idCategoria])
 
-    /* useEffect( () => {
-        const funcion = idCategoria ? getProductosPorCat : getProductos;
-
-        funcion(idCategoria)
-            .then(res => setProductos(res))
-    }, [idCategoria]) */
-
     return (
         <>
-        <h2 className="tituloGreeting"> {props.greeting} </h2>
-        <ItemList productos={productos}/>
-        </> 
+            <div className="divTitle">
+                <h2 className="tituloGreeting"> {props.greeting} </h2>
+                <img className="logoSabroso" src="../img/logo.png" alt="logo sabroson" />
+            </div>
+            <ItemList productos={productos} />
+        </>
     )
 }
 

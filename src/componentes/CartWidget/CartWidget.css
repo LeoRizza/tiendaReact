@@ -1,6 +1,5 @@
 .carrito {
-    width: 2rem;
-    
+    width: 2rem;   
 }
 
 .carritoDiv {
@@ -10,6 +9,7 @@
 }
 
 .carritoDiv:hover {
+    padding: 0 5px;
     zoom: 1.1;
     background-color: rgb(121, 28, 10, 0.5);
     border-radius: 50%;

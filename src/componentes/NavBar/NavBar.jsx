@@ -17,6 +17,7 @@ const NavBar = () => {
     return (
         <header>
             <Link className='logo' to="/">
+                <img className='logoNav' src="../img/logo2.png" alt="" />
                 <h1>SABROSON</h1>
             </Link>
 
