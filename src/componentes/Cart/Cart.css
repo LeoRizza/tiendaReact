@@ -61,3 +61,11 @@
 .cartButton:active {
     padding-bottom: 10px;
 }
+
+@media (max-width: 600px) {
+
+    .cartButton {
+        margin: 10px 0;
+    }
+
+}
